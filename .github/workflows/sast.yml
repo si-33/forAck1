@@ -22,4 +22,4 @@ jobs:
           accuknox_endpoint: ${{ secrets.ACCUKNOX_ENDPOINT }}
           accuknox_tenant: ${{ secrets.ACCUKNOX_TENANT_ID }}
           accuknox_label: ${{ secrets.ACCUKNOX_LABEL }}
-          input_soft_fail: false
+          upload_artifact: true
