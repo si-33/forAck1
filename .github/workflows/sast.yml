@@ -15,8 +15,8 @@ jobs:
       - name: Accuknox SAST
         uses: accuknox/sast-scan-opengrep-action@1.0.0
         with:
-          accuknox_token: ${{ eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU3Njc0MzMzLCJqdGkiOiI1ZDJjZDA2MDg0ZTY0MWFlYWU2ZDkxOTBiYWEyOGFjOCIsImlzcyI6ImNzcG0uZGVtby5hY2N1a25veC5jb20ifQ.LACimzvuOcjecTc5SEcd64r_HRrW087MGy2Y962NiTOVK5TvQ6iKfzqVNtXCu6Zmb1rI8XUBPMdBCpowksR_fSvR_sIQife_IgSfceI3MrE21_rww1cSQss1zT6hFjdSxQwXPWaWmrz087obH31iWw93xMU_5fvrHsAb77WLdAsbJaNQlHvyWx5DdU4K4J1dng0CPkZug2kcm1iBa3SKFOfrGhlXb5lm8HJ8C0O2DPxO60RfAg7jXJdjkQSVrZaPTdGaUnVW-KZJanW6M2bUdxSBJs3QoKMbM-uCIC-g1Px4mycMNRLJwSma2DIkF_fRr7biw28zRCgAqMGXqXXhtw }}
-          accuknox_endpoint: ${{ app.demo.accuknox.com }}
-          accuknox_tenant: ${{ 167 }}
-          accuknox_label: ${{ sidh }}
+          accuknox_token: ${{ secrets.eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU3Njc0MzMzLCJqdGkiOiI1ZDJjZDA2MDg0ZTY0MWFlYWU2ZDkxOTBiYWEyOGFjOCIsImlzcyI6ImNzcG0uZGVtby5hY2N1a25veC5jb20ifQ.LACimzvuOcjecTc5SEcd64r_HRrW087MGy2Y962NiTOVK5TvQ6iKfzqVNtXCu6Zmb1rI8XUBPMdBCpowksR_fSvR_sIQife_IgSfceI3MrE21_rww1cSQss1zT6hFjdSxQwXPWaWmrz087obH31iWw93xMU_5fvrHsAb77WLdAsbJaNQlHvyWx5DdU4K4J1dng0CPkZug2kcm1iBa3SKFOfrGhlXb5lm8HJ8C0O2DPxO60RfAg7jXJdjkQSVrZaPTdGaUnVW-KZJanW6M2bUdxSBJs3QoKMbM-uCIC-g1Px4mycMNRLJwSma2DIkF_fRr7biw28zRCgAqMGXqXXhtw }}
+          accuknox_endpoint: ${{ secrets.app.demo.accuknox.com }}
+          accuknox_tenant: ${{ secrets.167 }}
+          accuknox_label: ${{ secrets.sidh }}
           input_soft_fail: false
