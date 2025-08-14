@@ -1,4 +1,4 @@
-name: Accuknox SAST:OpenGrep
+name: Accuknox SAST: Opengrep
 
 on:
   push:
