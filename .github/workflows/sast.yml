@@ -1,5 +1,5 @@
-name: Accuknox SAST: Opengrep
-
+---
+name: Accuknox SAST:Opengrep
 on:
   push:
     branches:
@@ -7,20 +7,18 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   accuknox-cicd:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: "Run Accuknox SAST: Opengrep"
         uses: accuknox/sast-scan-opengrep-action@1.0.0
         with:
-          accuknox_endpoint: "cspm.stage.accuknox.com"
-          accuknox_tenant: "${{ secrets.STAGE_TENANT_ID }}"
-          accuknox_token: "${{ secrets.STAGE_TOKEN }}"
-          accuknox_label: "sidh"
+          accuknox_endpoint: cspm.demo.accuknox.com
+          accuknox_tenant: ${{ secrets.STAGE_TENANT_ID }}
+          accuknox_token: ${{ secrets.STAGE_TOKEN }}
+          accuknox_label: sidh
           input_soft_fail: "true"
           upload_artifact: true
