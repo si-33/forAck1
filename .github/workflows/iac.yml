@@ -23,7 +23,7 @@ jobs:
           framework: Terraform
           soft_fail: true
           endpoint: cspm.demo.accuknox.com
-          baseline: baseline
+          baseline: file
           token: ${{ secrets.TOKEN }}
           tenant_id: ${{ secrets.TENANT_ID }}
           label: ${{ secrets.LABEL }}
