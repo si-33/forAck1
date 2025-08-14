@@ -21,6 +21,6 @@ jobs:
           accuknox_endpoint: "cspm.stage.accuknox.com"
           accuknox_tenant: "${{ secrets.STAGE_TENANT_ID }}"
           accuknox_token: "${{ secrets.STAGE_TOKEN }}"
-          accuknox_label: "SPOC"
+          accuknox_label: "sidh"
           input_soft_fail: "true"
-          upload_artifact: false
+          upload_artifact: true
