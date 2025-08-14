@@ -1,25 +1,25 @@
-name: AccuKnox SAST Scan Workflow
+name: AccuKnox Opengrep SAST
 
 on:
-  push:
-    branches:
-      - master 
-  pull_request:
-    branches:
-      - master
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    accuknox-cicd:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-      - name: Accuknox SAST
-        uses: accuknox/sast-scan-opengrep-action@1.0.0
-        with:
-          accuknox_token: ${{ secrets.ACCUKNOX_TOKEN }}
-          accuknox_endpoint: ${{ secrets.ACCUKNOX_ENDPOINT }}
-          accuknox_tenant: ${{ secrets.ACCUKNOX_TENANT_ID }}
-          accuknox_label: ${{ secrets.ACCUKNOX_LABEL }}
-          upload_artifact: true
+            - name: "Run AccuKnox SAST: Opengrep"
+              uses: accuknox/sast-scan-opengrep-action@1.0.0
+              with:
+                  accuknox_endpoint: "${{ secrets.ACCUKNOX_ENDPOINT }}"
+                  accuknox_tenant: "${{ secrets.ACCUKNOX_TENANT }}"
+                  accuknox_token: "${{ secrets.ACCUKNOX_TOKEN }}"
+                  accuknox_label: "${{ secrets.ACCUKNOX_LABEL }}"
+                  upload_artifact: true
